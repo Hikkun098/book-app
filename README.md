@@ -22,3 +22,48 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# テーブル設計
+
+## users テーブル
+
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| name     | string | null: false |
+| email    | string | null: false |
+| password | string | null: false |
+| birthday | date   | null: false |
+
+### Association
+
+- has_many :books
+- has_many :comments
+
+## books テーブル
+
+| Column             | Type         | Options                        |
+| ------------------ | ------------ | ------------------------------ |
+| book_name          | string       | null: false, limit: 40         |
+| description        | text         | null: false, limit: 1000       |
+| category           | integer      | null: false                    |
+| age                | integer      | null: false                    |
+| price              | integer      | null: false                    |
+| user               | references   | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- has_many :comments
+
+## comments テーブル
+
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| content | string     |                                |
+| user    | references | null: false, foreign_key: true |
+| room    | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :book
+- belongs_to :user
