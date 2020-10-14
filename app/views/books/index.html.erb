@@ -1,0 +1,48 @@
+<%= render "shared/header" %>
+<div class='main'>
+
+  <%# 画面上部の「本アプリ」帯部分 %>
+  <div class="first-view">
+        <%= link_to image_tag("reading-925589_1920.jpg", class:"top-image") %>
+  </div>
+  <%# /画面上部の「本アプリ」帯部分  %>
+
+  <%# カテゴリー一覧 %>
+  <div class="upper-content">
+    <h2 class="heading-name">カテゴリー</h2>
+          <ul class="messages">
+            <li class="message">
+              <div>小説・文学</div>
+            </li>
+            <li class="message">
+              <div>言語</div>
+            </li>
+            <li class="message">
+              <div>雑誌</div>
+            </li>
+            <li class="message">
+              <div>自己啓発</div>
+            </li>
+            <li class="message">
+              <div>ビジネス・経済</div>
+            </li>
+            <li class="message">
+              <div>自然科学</div>
+            </li>
+            <li class="message">
+              <div>テクノロジー</div>
+            </li>
+            <li class="message">
+              <div>歴史・地理</div>
+            </li>
+            <li class="message">
+              <div>専門書</div>
+            </li>
+          </ul>
+  </div>
+  <div class="middle-content">
+    <h2 class="heading-name">投稿</h2>
+  </div>
+  <%# /カテゴリー一覧 %>
+
+<%= render "shared/footer" %>
