@@ -5,52 +5,62 @@
       <h5>新規アカウントの作成</h5>
     </div>
     <div class='account-page__inner--right user-form'>
-      <%#= form_with model: resource, as: resource_name, url: registration_path(resource_name), local: true do |f|%>
+      <%= form_with model: @user, url: user_registration_path, local: true do |f|%>
         <%= devise_error_messages!%>
         <div class='field'>
           <div class='field-label'>
-            <%#= f.label :name%>
+            <%= f.label :name%>
           </div>
           <div class='field-input'>
-            <%#= f.text_field :name, autofocus: true%>
+            <%= f.text_field :nickname, autofocus: true%>
           </div>
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%#= f.label :email%>
+            <%= f.label :email%>
           </div>
           <div class='field-input'>
-            <%#= f.email_field :email%>
+            <%= f.email_field :email%>
           </div>
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%#= f.label :password%>
+            <%= f.label :password%>
             <i>(英数字6文字以上)</i>
           </div>
           <div class='field-input'>
-            <%#= f.password_field :password, autocomplete: "off"%>
+            <%= f.password_field :password, autocomplete: "off"%>
           </div>
         </div>
         <div class='field'>
           <div class='field-label'>
-            <%#= f.label :password_confirmation%>
+            <%= f.label :password_confirmation%>
           </div>
           <div class='field-input'>
-            <%#= f.password_field :password_confirmation, autocomplete: "off"%>
+            <%= f.password_field :password_confirmation, autocomplete: "off"%>
           </div>
         <div class='field'>
           <div class='field-label'>
-            <%#= f.label :birthday%>
+            <%= f.label :birthday%>
           </div>
           <div class='field-input'>
-            <%#= f.birthday_field :birthday, autocomplete: "off"%>
+            <%= raw sprintf(
+                  f.date_select(
+                    :birthday,
+                    class:'select-birth',
+                    id:"birth-date",
+                    use_month_numbers: true,
+                    prompt:'--',
+                    start_year: 1930,
+                    end_year: (Time.now.year - 5),
+                    date_separator: '%s'),
+                  "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
           </div>
         </div>
         <div class='actions'>
-          <%#= f.submit "Create Account", class: 'btn'%>
+          <%= f.submit "Create Account", class: 'btn'%>
         </div>
       </div>
-    <% #end %>
+    <% end %>
   </div>
 </div>
