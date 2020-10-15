@@ -40,9 +40,15 @@
             </li>
           </ul>
   </div>
-  <div class="middle-content">
-    <h2 class="heading-name">投稿</h2>
-  </div>
   <%# /カテゴリー一覧 %>
+
+  <%# 投稿遷移%>
+  <div class='purchase-btn'>
+    <span class='purchase-btn-text'>投稿する</span>
+    <a href="tweets/new">
+      <%= image_tag 'baseline_menu_book_black_18dp.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+    </a>
+  </div>
+</div>
 
 <%= render "shared/footer" %>
