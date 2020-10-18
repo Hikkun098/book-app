@@ -15,4 +15,5 @@ class Book < ApplicationRecord
   VALID_PRICE_REGEX = /\A[0-9]+\z/
   validates :price, presence: true, format: { with: VALID_PRICE_REGEX }
   validates :user, presence: true
+
 end
