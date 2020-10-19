@@ -16,6 +16,14 @@ class BooksController < ApplicationController
     end
   end
 
+  def destroy
+    if @book.destroy
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
   private
   def book_params
     params.require(:book).permit(:image, :book_name, :description, :category_id, :age, :price).merge(user_id: current_user.id)
