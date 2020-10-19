@@ -44,8 +44,7 @@
 
   <%# 本一覧 %>
   <div class='item-contents'>
-    <h2 class='title'>ピックアップカテゴリー</h2>
-    <%= link_to '新規投稿', new_user_password_path, class: "subtitle" %>
+    <h2 class='heading-name'>ピックアップカテゴリー</h2>
     <% @books.each do |book| %>
     <ul class='item-lists'>
 
@@ -61,10 +60,6 @@
           </h3>
           <div class='item-price'>
             <span><%= book.price %>円<br>(税込み)</span>
-            <div class='star-btn'>
-              <%= image_tag "star.png", class:"star-icon" %>
-              <span class='star-count'>0</span>
-            </div>
           </div>
         </div>
         <% end %>

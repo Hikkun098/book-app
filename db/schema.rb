@@ -34,10 +34,9 @@ ActiveRecord::Schema.define(version: 2020_10_19_025026) do
   end
 
   create_table "books", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.text "image", null: false
     t.string "book_name", limit: 30, null: false
     t.text "description", null: false
-    t.integer "category", null: false
+    t.integer "category_id", null: false
     t.integer "age", null: false
     t.integer "price", null: false
     t.bigint "user_id", null: false
