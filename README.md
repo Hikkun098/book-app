@@ -43,8 +43,9 @@ Things you may want to cover:
 
 | Column             | Type         | Options                        |
 | ------------------ | ------------ | ------------------------------ |
-| book_name          | string       | null: false, limit: 40         |
-| description        | text         | null: false, limit: 1000       |
+| image              | text         | null: false                    |
+| book_name          | string       | null: false, limit: 30         |
+| description        | text         | null: false, limit: 300        |
 | category           | integer      | null: false                    |
 | age                | integer      | null: false                    |
 | price              | integer      | null: false                    |
