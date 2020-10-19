@@ -4,32 +4,32 @@
 <div class="item-show">
   <div class="item-box">
     <h2 class="name">
-      <%#= @item.item_name %>
+      <%= @book.book_name %>
     </h2>
     <div class='item-img-content'>
-      <%#= image_tag @item.image ,class:"item-box-img" %>
+      <%= image_tag @book.image ,class:"item-box-img" %>
     </div>
 
     <%# ログインしているユーザーと出品しているユーザーが、同一人物の場合と同一人物ではない場合で、処理を分けましょう %>
-    <%#if user_signed_in? && current_user.id == @item.user.id %> 
-    <%#= link_to '商品の編集', edit_item_path, method: :get, class: "item-red-btn" %>
+    <%if user_signed_in? && current_user.id == @book.user.id %> 
+    <%= link_to '本の編集', edit_book_path, method: :get, class: "item-red-btn" %>
     <p class='or-text'>or</p>
-    <%#= link_to '削除', item_path, method: :delete, class:'item-destroy' %>
-    <% #end %>
+    <%= link_to '削除', book_path, method: :delete, class:'item-destroy' %>
+    <% end %>
     <%# //ログインしているユーザーと出品しているユーザーが、同一人物の場合と同一人物ではない場合で、処理を分けましょう %>
 
     <div class="item-explain-box">
-      <span><%= @item.description %></span>
+      <span><%= @book.description %></span>
     </div>
     <table class="detail-table">
       <tbody>
         <tr>
           <th class="detail-item">投稿者</th>
-          <td class="detail-value"><%#= @item.user.nickname %></td>
+          <td class="detail-value"><%= @book.user.nickname %></td>
         </tr>
         <tr>
           <th class="detail-item">カテゴリー</th>
-          <td class="detail-value"><%#= @item.category.name %></td>
+          <td class="detail-value"><%= @book.category.name %></td>
         </tr>
       </tbody>
     </table>
@@ -45,12 +45,12 @@
         不快な言葉遣いなどは利用制限や退会処分となることがあります。
       </p>
       <button type="submit" class="comment-btn">
-        <%= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
+        <%#= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
         <span>コメントする<span>
       </button>
     </form>
   </div>
-  <a href="#" class='another-item'><%#= @item.category.name %>をもっと見る</a>
+  <a href="#" class='another-item'><%= @book.category.name %>をもっと見る</a>
 </div>
 
 <%= render "shared/footer" %>
