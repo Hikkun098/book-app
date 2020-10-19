@@ -42,6 +42,39 @@
   </div>
   <%# /カテゴリー一覧 %>
 
+  <%# 本一覧 %>
+  <div class='item-contents'>
+    <h2 class='title'>ピックアップカテゴリー</h2>
+    <%= link_to '新規投稿', new_user_password_path, class: "subtitle" %>
+    <% @books.each do |book| %>
+    <ul class='item-lists'>
+
+      <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
+      <li class='list'>
+        <%= link_to book_path(book) do %>
+        <div class='item-img-content'>
+          <%= image_tag book.image, class: "item-img" %>
+        </div>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            <%= book.book_name %>
+          </h3>
+          <div class='item-price'>
+            <span><%= book.price %>円<br>(税込み)</span>
+            <div class='star-btn'>
+              <%= image_tag "star.png", class:"star-icon" %>
+              <span class='star-count'>0</span>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </li>
+    <% end %>
+      <%# //商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
+    </ul>
+  </div>
+  <%# /本一覧 %>
+
   <%# 投稿遷移%>
   <div class='purchase-btn'>
     <span class='purchase-btn-text'>投稿する</span>
