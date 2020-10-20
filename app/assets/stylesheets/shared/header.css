@@ -10,9 +10,12 @@ header {
   margin-left: 30px;
 }
 
-h1 {
-  padding: 10px 0;
-  margin: 0;
+.title{
+  text-decoration: none;
+    line-height: 50px;
+    color: black;
+    font-size: 30px;
+    font-family: monospace;
 }
 
 .navbar {
@@ -29,4 +32,29 @@ h1 {
 
 li {
   list-style: none;
+}
+
+.user-nickname {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: black;
+  font-weight: bold;
+}
+
+
+.logout {
+  text-decoration: none;
+  color: black;
+}
+
+.login {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color: black;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: black;
 }
