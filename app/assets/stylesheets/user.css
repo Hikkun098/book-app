@@ -24,9 +24,9 @@
 .account-page .account-page__header h2:after {
   content: "";
   display: block;
-  width: 60px;
+  width: 350px;
   margin-top: 5px;
-  border-bottom: 1px solid #38aef0;
+  border-bottom: 1px solid #00e5f0;
 }
 .account-page .account-page__header h5 {
   margin-bottom: 20px;
@@ -70,7 +70,7 @@
   float: left;
   margin-top: 20px;
   color: #fff;
-  background-color: #38aef0;
+  background-color: #00e5f0;
 }
 .account-page .field-label .field_with_errors {
   display: inline-block;
@@ -89,6 +89,12 @@
   bottom: 0;
   width: 5px;
   background-color: #d65f4c;
+}
+
+.field-input{
+  display: flex;
+    width: 100%;
+    letter-spacing: 50px;
 }
 
 #error_explanation {
