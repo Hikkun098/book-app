@@ -1,7 +1,7 @@
-<div class="items-sell-contents">
+<div class="books-sell-contents">
   
-  <div class="items-sell-main">
-    <h2 class="items-sell-title">本の情報を入力</h2>
+  <div class="books-sell-main">
+    <h2 class="books-sell-title">本の情報を入力</h2>
     <%= form_with model: @book, url: books_path, local: true do |f| %>
 
     <%= render 'shared/error_messages', model: f.object %>
@@ -16,37 +16,37 @@
         <p>
           クリックしてファイルをアップロード
         </p>
-          <%= f.file_field :image, id:"item-image" %>
+          <%= f.file_field :image, id:"book-image" %>
         <div id="image-list" ></div>
       </div>
     </div>
     <%# /投稿画像 %>
 
     <%# 題名と概要 %>
-    <div class="new-items">
+    <div class="new-books">
       <div class="weight-bold-text">
         題名
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :book_name, class:"items-text", id:"item-name", placeholder:"題名（必須 30文字まで)", maxlength:"30" %>
-      <div class="items-explain">
+      <%= f.text_area :book_name, class:"books-text", id:"book-name", placeholder:"題名（必須 30文字まで)", maxlength:"30" %>
+      <div class="books-explain">
         <div class="weight-bold-text">
           概要
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :description, class:"items-text", id:"item-info", placeholder:"本の概要（必須 300文字まで）" ,rows:"7" ,maxlength:"300" %>
+        <%= f.text_area :description, class:"books-text", id:"book-info", placeholder:"本の概要（必須 300文字まで）" ,rows:"7" ,maxlength:"300" %>
       </div>
     </div>
     <%# /題名と概要 %>
 
     <%# 本の詳細 %>
-    <div class="items-detail">
+    <div class="books-detail">
       <div class="form">
         <div class="weight-bold-text">
           カテゴリー
           <span class="indispensable">必須</span>
         </div>
-        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"book-category"}) %>
       </div>
       <div class="price-content">
           <div class="price-text">
@@ -54,7 +54,7 @@
             <span class="indispensable">必須</span>
           </div>
           <span class="sell-yen">歳</span>
-          <%= f.text_field :age, class:"price-input", id:"item-price", placeholder:"例）20" %>
+          <%= f.text_field :age, class:"price-input", id:"book-price", placeholder:"例）20" %>
         </div>
       <div class="price-content">
           <div class="price-text">
@@ -62,7 +62,7 @@
             <span class="indispensable">必須</span>
           </div>
           <span class="sell-yen">¥</span>
-          <%= f.text_field :price, class:"price-input", id:"item-price", placeholder:"例）1000" %>
+          <%= f.text_field :price, class:"price-input", id:"book-price", placeholder:"例）1000" %>
       </div>
     </div>
     <%# /本の詳細 %>

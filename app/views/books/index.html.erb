@@ -40,22 +40,22 @@
   <%# /カテゴリー一覧 %>
 
   <%# 本一覧 %>
-  <div class='item-contents'>
+  <div class='book-contents'>
     <h2 class='heading-name'>ピックアップカテゴリー</h2>
     <% @books.each do |book| %>
-    <ul class='item-lists'>
+    <ul class='book-lists'>
 
       <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
       <li class='list'>
         <%= link_to book_path(book) do %>
-        <div class='item-img-content'>
-          <%= image_tag book.image, class: "item-img" %>
+        <div class='book-img-content'>
+          <%= image_tag book.image, class: "book-img" %>
         </div>
-        <div class='item-info'>
-          <h3 class='item-name'>
+        <div class='book-info'>
+          <h3 class='book-name'>
             <%= book.book_name %>
           </h3>
-          <div class='item-price'>
+          <div class='book-price'>
             <span><%= book.price %>円<br>(税込み)</span>
           </div>
         </div>
