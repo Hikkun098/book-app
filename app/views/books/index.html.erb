@@ -12,60 +12,32 @@
     <h2 class="heading-name">カテゴリー</h2>
           <ul class="messages">
             <li class="message">
-              小説・文学
+              <%= link_to '小説・文学', "/", class:"message" %>
             </li>
             <li class="message">
-               言語
+               <%= link_to '言語', "/", class:"message" %>
             </li>
             <li class="message">
-              自己啓発
+              <%= link_to '自己啓発', "/", class:"message" %>
             </li>
             <li class="message">
-              ビジネス・経済
+              <%= link_to 'ビジネス・経済', "/", class:"message" %>
             </li>
             <li class="message">
-              自然科学
+              <%= link_to '自然科学', "/", class:"message" %>
             </li>
             <li class="message">
-              テクノロジー
+              <%= link_to 'テクノロジー', "/", class:"message" %>
             </li>
             <li class="message">
-              歴史・地理
+              <%= link_to '歴史・地理', "/", class:"message" %>
             </li>
             <li class="message">
-              専門書
+              <%= link_to '専門書', "/", class:"message" %>
             </li>
           </ul>
   </div>
   <%# /カテゴリー一覧 %>
-
-  <%# 本一覧 %>
-  <div class='book-contents'>
-    <h2 class='heading-name'>ピックアップカテゴリー</h2>
-    <% @books.each do |book| %>
-    <ul class='book-lists'>
-
-      <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
-      <li class='list'>
-        <%= link_to book_path(book) do %>
-        <div class='book-img-content'>
-          <%= image_tag book.image, class: "book-img" %>
-        </div>
-        <div class='book-info'>
-          <h3 class='book-name'>
-            <%= book.book_name %>
-          </h3>
-          <div class='book-price'>
-            <span><%= book.price %>円<br>(税込み)</span>
-          </div>
-        </div>
-        <% end %>
-      </li>
-    <% end %>
-      <%# //商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
-    </ul>
-  </div>
-  <%# /本一覧 %>
 
   <%# 投稿遷移%>
   <div class='purchase-btn'>
