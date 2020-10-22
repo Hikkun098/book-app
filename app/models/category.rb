@@ -4,4 +4,6 @@ class Category < ActiveHash::Base
     {id: 4, name: '自己啓発'},{id: 5, name: 'ビジネス・経済'}, {id: 6, name: '自然科学'},
     {id: 7, name: 'テクノロジー'}, {id: 8, name: '歴史・地理'},{id: 9, name: '専門書'}
     ]
+
+    has_ancestry
 end
