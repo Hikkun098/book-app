@@ -48,4 +48,18 @@ class BooksController < ApplicationController
   def book_params
     params.require(:book).permit(:image, :book_name, :description, :category_id, :age, :price).merge(user_id: current_user.id)
   end
-end
+
+  def select__category_index
+    @category = Category.find_by(id: params[:id])
+    if @category.ancestry == nil
+      category = Category.find_by(id: params[:id]).indirect_ids
+      @books = []
+      find_book(category)
+    elsif @category.ancestry.include?("/")
+      @book = Book.where(category_id: params[:id])
+    else
+      category = Category.find_by(id: params[:id]).child_ids
+      @book = []
+      find_book(category)
+    end
+  end
