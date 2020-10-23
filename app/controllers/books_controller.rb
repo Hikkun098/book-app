@@ -63,3 +63,4 @@ class BooksController < ApplicationController
       find_book(category)
     end
   end
+end
