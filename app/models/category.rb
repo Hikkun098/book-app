@@ -7,6 +7,6 @@
 #end
 
 class Category < ApplicationRecord
-      has_many :book_categories
+      belongs_to :book
       has_ancestry
 end
