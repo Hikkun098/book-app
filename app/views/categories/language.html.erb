@@ -1,10 +1,10 @@
 <%# 本一覧 %>
   <div class='book-contents'>
-    <h2 class='heading-name'>ピックアップカテゴリー</h2>
-    <% @books.each do |book| %>
-    <ul class='book-lists'>
+    <h2 class='heading-name'>本一覧</h2>
+    <% @category_parent_array.each do |parent_categories| %>
 
-      <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
+      <%# 本のインスタンス変数になにか入っている場合、中身のすべてを展開 %>
+      <ul class='book-lists'>
       <li class='list'>
         <%= link_to book_path(book) do %>
         <div class='book-img-content'>
@@ -21,7 +21,8 @@
         <% end %>
       </li>
     <% end %>
-      <%# //商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
     </ul>
+      <%# //本のインスタンス変数になにか入っている場合、中身のすべてを展開 %>
+      
   </div>
   <%# /本一覧 %>

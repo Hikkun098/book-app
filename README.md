@@ -68,3 +68,16 @@ Things you may want to cover:
 
 - belongs_to :book
 - belongs_to :user
+
+## categories テーブル
+
+| Column   | Type       | Options                        |
+| -------- | ---------- | ------------------------------ |
+| ancestry | string     |                                |
+| user     | references | null: false, foreign_key: true |
+| book     | references | null: false, foreign_key: true |
+
+### Association
+
+- has_many :books
+- has_ancestry
