@@ -10,13 +10,13 @@
       <%= image_tag @book.image ,class:"book-box-img" %>
     </div>
 
-    <%# ログインしているユーザーと出品しているユーザーが、同一人物の場合と同一人物ではない場合で、処理を分けましょう %>
+    <%# ログインしているユーザーと出品しているユーザーが、同一人物の場合と同一人物ではない場合で、処理 %>
     <%if user_signed_in? && current_user.id == @book.user.id %> 
     <%= link_to '本の編集', edit_book_path, method: :get, class: "book-red-btn" %>
     <p class='or-text'>or</p>
     <%= link_to '削除', book_path, method: :delete, class:'book-destroy' %>
     <% end %>
-    <%# //ログインしているユーザーと出品しているユーザーが、同一人物の場合と同一人物ではない場合で、処理を分けましょう %>
+    <%# //ログインしているユーザーと出品しているユーザーが、同一人物の場合と同一人物ではない場合で、処理 %>
 
     <div class="book-explain-box">
       <span><%= @book.description %></span>

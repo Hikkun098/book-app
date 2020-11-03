@@ -9,9 +9,9 @@ app/assets/stylesheets/books/new.css %>
     <h2 class="books-sell-title">本の情報を入力</h2>
     <%= form_with model: @book, local: true do |f| %>
 
-    <%# インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
+    <%# インスタンスを渡して、エラー発生時にメッセージが表示。%>
     <% render 'shared/error_messages', model: f.object %>
-    <%# //インスタンスを渡して、エラー発生時にメッセージが表示されるようにしましょう。%>
+    <%# //インスタンスを渡して、エラー発生時にメッセージが表示。%>
 
     <%# 投稿画像 %>
     <div class="img-upload">

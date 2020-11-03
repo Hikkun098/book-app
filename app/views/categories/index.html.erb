@@ -26,3 +26,32 @@
       
   </div>
   <%# /本一覧 %>
+
+  <%# 本一覧 %>
+  <#div class='book-contents'>
+    <#h2 class='heading-name'>本一覧</#h2>
+    <% #@books.each do |book| %>
+    <#ul class='book-lists'>
+
+      <%# 本のインスタンス変数になにか入っている場合、中身のすべてを展開 %>
+      <#li class='list'>
+        <%#= link_to book_path(book) do %>
+        <#div class='book-img-content'>
+          <%#= image_tag book.image, class: "book-img" %>
+        </#div>
+        <#div class='book-info'>
+          <#h3 class='book-name'>
+            <%#= book.book_name %>
+          </#h3>
+          <#div class='book-price'>
+            <span><%#= book.price %>円<br>(税込み)</span>
+          </div>
+        </div>
+        <% #end %>
+      </li>
+    <% #end %>
+      <%# //本のインスタンス変数になにか入っている場合、中身のすべてを展開 %>
+
+    </ul>
+  </div>
+  <%# /本一覧 %>

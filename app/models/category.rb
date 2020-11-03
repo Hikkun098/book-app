@@ -5,3 +5,8 @@ class Category < ActiveHash::Base
     {id: 7, name: 'テクノロジー'}, {id: 8, name: '歴史・地理'},{id: 9, name: '専門書'}
     ]
 end
+
+#class Category < ApplicationRecord
+      #belongs_to :book
+      #has_ancestry
+#end
