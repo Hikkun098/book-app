@@ -12,28 +12,28 @@
     <h2 class="heading-name">カテゴリー</h2>
           <ul class="messages">
             <li class="message">
-              <%= link_to '小説・文学', "categories_path", class:"message" %>
+              <%= link_to '小説・文学', controller: "books", action: "index", category_id: 2, class:"message" %>
             </li>
             <li class="message">
-               <%= link_to '言語', "/", class:"message" %>
+               <%= link_to '言語', controller: "books", action: "index", category_id: 3, class:"message" %>
             </li>
             <li class="message">
-              <%= link_to '自己啓発', "/", class:"message" %>
+              <%= link_to '自己啓発', controller: "books", action: "index", category_id: 4, class:"message" %>
             </li>
             <li class="message">
-              <%= link_to 'ビジネス・経済', "/", class:"message" %>
+              <%= link_to 'ビジネス・経済', controller: "books", action: "index", category_id: 5, class:"message" %>
             </li>
             <li class="message">
-              <%= link_to '自然科学', "/", class:"message" %>
+              <%= link_to '自然科学', controller: "books", action: "index", category_id: 6, class:"message" %>
             </li>
             <li class="message">
-              <%= link_to 'テクノロジー', "/", class:"message" %>
+              <%= link_to 'テクノロジー', controller: "books", action: "index", category_id: 7, class:"message" %>
             </li>
             <li class="message">
-              <%= link_to '歴史・地理', "/", class:"message" %>
+              <%= link_to '歴史・地理', controller: "books", action: "index", category_id: 8, class:"message" %>
             </li>
             <li class="message">
-              <%= link_to '専門書', "/", class:"message" %>
+              <%= link_to '専門書', controller: "books", action: "index", category_id: 9, class:"message" %>
             </li>
           </ul>
   </div>
