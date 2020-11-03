@@ -59,4 +59,10 @@ gem 'devise'
 
 gem 'active_hash'
 
+カテゴリーごとに投稿を表示
 gem 'ancestry'
+
+group :production do
+  gem 'rails_12factor'
+end
+master
